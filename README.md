@@ -17,7 +17,7 @@ This analysis is done with the aim of achieving the following:
 ### Data Collection Process
 
 - **Usage Tracking:** The daily usage times for Instagram and WhatsApp will be recorded using the Digital Wellbeing feature on my Android or Screen Time on iOS smartphone.  
-- **Duration:** Data collection will last for at least 14 consecutive days.  
+- **Duration:** Data collection will last for at least 30 consecutive days.  
 - **Manual Notes:** In instances where app-specific features are not detailed in showing usage times, this will be supplemented by manual tracking—for example, differentiating time spent messaging versus consuming content.
 
 ### Data Features

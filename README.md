@@ -1,4 +1,4 @@
-# DSA 210 Proposal: Analysis of the Relationship between Instagram and WhatsApp Usage Times - Merve Gün (30756)
+# DSA 210 Proposal: Analysis of the Relationship between Instagram and WhatsApp Usage Times - Merve Gün (30752)
 
 ## 1. Motivation
 

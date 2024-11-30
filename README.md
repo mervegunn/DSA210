@@ -9,6 +9,7 @@ This analysis is done with the aim of achieving the following:
 Understand my digital behavior better.
 Know patterns in my social media use that will help me have balanced habits.
 Offer a case study that can encourage broader investigations.
+
 ##**2. Data Source**
 
 The data for this work will be self-collected and analyzed as follows:
@@ -16,10 +17,12 @@ The data for this work will be self-collected and analyzed as follows:
 **Data Collection Process**
 Usage Tracking: The daily usage times for Instagram and WhatsApp will be recorded using the Digital Wellbeing feature on my Android or Screen Time on iOS smartphone. Duration: Data collection will last for at least 14 consecutive days.
 Manual Notes: In instances where app-specific features are not detailed in showing usage times, this will be supplemented by manual tracking-for example, differentiating time spent messaging versus consuming content. 
+
 **Data Features**
 Variables: Instagram usage time (in minutes) and WhatsApp usage time (in minutes).
 Daily Records: Two data points (Instagram and WhatsApp usage times) will be collected per day.
 Context Notes: Special circumstances (e.g., holidays, busy workdays) that could affect usage patterns will be noted daily.
+
 ##**3. Data Analysis**
 
 ##**3.1 Data Cleaning and Preprocessing**

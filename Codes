@@ -1,0 +1,68 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy.stats import linregress
+
+# Generate sample data for analysis (30 days of usage)
+days = [f"Day {i}" for i in range(1, 31)]
+instagram_usage = np.random.randint(10, 300, size=30)
+whatsapp_usage = np.random.randint(5, 200, size=30)
+
+# Create DataFrame
+data = pd.DataFrame({
+    "Day": days,
+    "Instagram (minutes)": instagram_usage,
+    "WhatsApp (minutes)": whatsapp_usage
+})
+
+# Linear Regression and p-value calculation
+slope, intercept, r_value, p_value, std_err = linregress(data["Instagram (minutes)"], data["WhatsApp (minutes)"])
+
+# Print regression results
+print(f"Slope: {slope}")
+print(f"Intercept: {intercept}")
+print(f"Correlation Coefficient (r): {r_value}")
+print(f"P-value: {p_value}")
+print(f"Standard Error: {std_err}")
+
+# Visualization 1: Histogram
+plt.figure(figsize=(10, 6))
+sns.histplot(data["Instagram (minutes)"], color="blue", kde=True, label="Instagram")
+sns.histplot(data["WhatsApp (minutes)"], color="green", kde=True, label="WhatsApp")
+plt.title("Distribution of Usage Times")
+plt.xlabel("Minutes")
+plt.ylabel("Frequency")
+plt.legend()
+plt.show()
+
+# Visualization 2: Box Plot
+plt.figure(figsize=(10, 6))
+sns.boxplot(data=data[["Instagram (minutes)", "WhatsApp (minutes)"]])
+plt.title("Boxplot of Usage Times")
+plt.ylabel("Minutes")
+plt.show()
+
+# Visualization 3: Scatter Plot
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x="Instagram (minutes)", y="WhatsApp (minutes)", data=data, color="purple")
+sns.regplot(x="Instagram (minutes)", y="WhatsApp (minutes)", data=data, scatter=False, color="red")
+plt.title("Scatter Plot of Instagram vs WhatsApp Usage")
+plt.xlabel("Instagram Usage (minutes)")
+plt.ylabel("WhatsApp Usage (minutes)")
+plt.show()
+
+# Weekday vs Weekend Analysis
+data["Type"] = ["Weekday" if i % 7 not in [5, 6] else "Weekend" for i in range(30)]
+weekend_avg_instagram = data[data["Type"] == "Weekend"]["Instagram (minutes)"].mean()
+weekday_avg_instagram = data[data["Type"] == "Weekday"]["Instagram (minutes)"].mean()
+
+plt.figure(figsize=(10, 6))
+sns.barplot(x="Type", y="Instagram (minutes)", data=data, ci=None, palette="muted")
+plt.title("Average Instagram Usage: Weekdays vs Weekends")
+plt.ylabel("Average Usage (minutes)")
+plt.show()
+
+# Summary of findings
+print(f"Weekend Average Instagram Usage: {weekend_avg_instagram}")
+print(f"Weekday Average Instagram Usage: {weekday_avg_instagram}")
